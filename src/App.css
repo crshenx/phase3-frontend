@@ -13,10 +13,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 105vh;
 }
 
 .description {
-    width: 45%;
+    width: 50%;
     font-weight: 650;
+    text-align: center;
+    font-family: comic sans;
 }
