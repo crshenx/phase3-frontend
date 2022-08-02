@@ -1,0 +1,24 @@
+.splash {
+    display: flex;
+    height: 100%;
+    background-image: url('https://i.imgur.com/ehETORR.png');
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+}
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 105vh;
+}
+
+.description {
+    width: 50%;
+    font-weight: 650;
+    text-align: center;
+    font-family: comic sans;
+}
