@@ -7,7 +7,7 @@ function App() {
   const [render, setRender] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:9292/test")
+    fetch("http://localhost:9292/dresses")
       .then((r) => r.json())
       .then(setRender);
   }, []);
