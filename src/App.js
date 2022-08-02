@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Home from "./components/home";
 
 function App() {
   const [render, setRender] = useState([]);
@@ -11,7 +12,7 @@ function App() {
 
   console.log(render);
 
-  return <div className="App">{render.message}</div>;
+  return <Home />;
 }
 
 export default App;
