@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import NavBar from "./NavBar.js";
+import Home from "./Home.js";
+import './App.css';
+
 
 function App() {
   const [render, setRender] = useState([]);
@@ -11,7 +15,12 @@ function App() {
 
   console.log(render);
 
-  return <div className="App">{render.message}</div>;
+  return (
+    <div>
+      <NavBar />
+      <Home/>
+    </div>
+  )
 }
 
 export default App;

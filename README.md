@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Flatiron E-Commerce App - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+" " is an e-commerce platform that lets the user interact and shop for wedding dresses; allowing the user to browse the catalog, and checkout using a shopping cart - created by members of Flatiron School.
 
-## Available Scripts
+Users will be able to:
 
-In the project directory, you can run:
+* User will land on the homepage, where they can browse the catalog of wedding dresses available 
+* User can filter through the different dresses using the Search bar via, various critera
+* Users can add dresses to a shopping cart 
+* Users can navigate the Home page, shopping cart, and About page via the Nav Bar
 
-### `npm start`
+Technologies used: Our frontend was built with React.js and communicates with our Sinatra backend API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project was created using [Create React App](https://create-react-app.dev/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Goals
 
-### `npm test`
+Our goal is to build a web basic API with Sinatra and Active Record to support a React frontend and simulate a 
+professional work environment:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* plan out your wireframes and features
+* pitch our app in a project proposal
+* use Git/Github for our source control system to track code changes and collaborate with team
+* build a separate React frontend application that interacts with the API to perform CRUD (create, read, update, delete) actions
+* utilize UI for our CSS styling
 
-### `npm run build`
+## Expected Accomplishments 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* organize our code into purposeful components in order to keep it clean and dry
+* incorporate a UI framework for our styling with [react-bootstrap](https://react-bootstrap.github.io/) or [Material UI](https://mui.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Frontend Setup
+Fork and clone [our frontend repository] onto your local environment:  
+In the project directory, install the dependencies by running:  
+`npm install`  
 
-### `npm run eject`
+In the project directory, you can run:  
+`npm start`  
+Runs the app in the development mode.  
+Open http://localhost:3000 to view it in your browser.  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Fork and clone [our backend repository] onto your local environment:  
+Install the dependencies by running:  
+`npm install`  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run your server in development mode, run:  
+`npm run dev`  
+While running in development mode, the server will re-load any time you make changes to the db.json file, so you can test our your seed data.  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+While your server is running, you can make requests to http://localhost:3000. Check it out in the browser to make sure your server works!  
 
-## Learn More
+Creators
+---
+Lauren Erxleben [Github](https://github.com/laurennoelle)  [Linkedin](www.linkedin.com/in/lauren-erxleben) 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Chris Hendricks [Github]()  [Linkedin]() 
