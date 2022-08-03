@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 105vh;
+    height: 95vh;
 }
 
 .description {
@@ -21,4 +21,32 @@
     font-weight: 650;
     text-align: center;
     font-family: comic sans;
+}
+
+.logo {
+    height: 80px ;
+    width: 80px;
+}
+
+.search {
+    width: 50%;
+    text-align: center;
+  
+    position: relative;
+    display: block;
+    margin: auto;
+    padding: 2rem;
+  }
+
+.button {
+    background-color: #beabd8;
+    border: #beabd8;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 2;
+    border-radius: .25rem;
+    font-size: 1rem;
 }
