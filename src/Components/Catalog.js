@@ -12,7 +12,7 @@ function Catalog( {render} ) {
     <Container>
     <SearchBar render={render} />
     <Grid container direction="row" justifyContent="center" alignItems="center"
-    rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+    rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }} maxWidth="false">
     
       {render.map((dress) => {
         return <DressCard dress={dress} key={dress.id}/>

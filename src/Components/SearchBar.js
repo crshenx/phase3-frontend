@@ -14,7 +14,7 @@ export default function SearchBar( {render} ) {
 
   return (
     <Autocomplete
-      id="grouped-demo"
+      id="search"
       options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
       groupBy={(option) => option.firstLetter}
       getOptionLabel={(option) => option.name}

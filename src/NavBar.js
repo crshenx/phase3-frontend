@@ -15,7 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 // import Catalog from "./Components/Catalog";
 
-const pages = ["Home", "Catalog", "About"];
+const pages = ["Home", "Catalog", "Shopping Cart", "About"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavBar = () => {
@@ -44,10 +44,10 @@ const NavBar = () => {
   // }
 
   return (
-    <AppBar position="static" style={{ background: "#beabd8" }}>
+    <AppBar position="sticky" style={{ background: "#beabd8" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+        <img src="https://i.imgur.com/QW2bPCK.png" alt="logo" className="logo" />
           <Typography
             variant="h6"
             noWrap
