@@ -1,8 +1,17 @@
-import React from 'react'
 
-function Catalog() {
+import React from 'react'
+import DressCard from './DressCard'
+
+
+function Catalog( {render} ) {
+  
+
   return (
-    <div>I am the Catalog Link!</div>
+    <div>
+      {render.map((dress) => {
+        return <DressCard dress={dress} key={dress.id}/>
+      })}
+    </div>
   )
 }
 

@@ -24,10 +24,10 @@ function App() {
       <div>
       <Switch>
       <Route path="/" >
-      <Home />  
+      <Catalog render={render}/>  
       </Route>
       <Route path="/catalog" >
-        <Catalog/>
+        <Home/>
       </Route>
       </Switch>
       </div>
