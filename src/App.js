@@ -6,10 +6,13 @@ import Home from "./Home.js";
 import "./App.css";
 import Catalog from "./Components/Catalog.js";
 import { Paper } from "@mui/material";
+// import { ShoppingCart } from "@mui/icons-material";
 // import Image from "./img/main.jpg";
+import Cart from "./Components/ShoppingCart";
 
 function App() {
   const [render, setRender] = useState([]);
+  const [renderCart, setRenderCart] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:9292/dresses")
@@ -17,7 +20,19 @@ function App() {
       .then(setRender);
   }, []);
 
-  console.log(render);
+  useEffect(() => {
+    fetch("http://localhost:9292/cart")
+      .then((r) => r.json())
+      .then(setRenderCart);
+  }, []);
+
+  function handleCartRender() {
+    fetch("http://localhost:9292/cart")
+      .then((r) => r.json())
+      .then(setRenderCart);
+  }
+
+  console.log(renderCart);
 
   const styles = {
     paperContainer: {
@@ -30,12 +45,22 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/Home" element={<Home />} />
-        <Route path="Catalog" element={<Catalog render={render} />} />
+        <Route
+          path="Catalog"
+          element={
+            <Catalog render={render} handleCartRender={handleCartRender} />
+          }
+        />
+        <Route
+          path="Cart"
+          element={
+            <Cart renderCart={renderCart} handleCartRender={handleCartRender} />
+          }
+        />
         {/* <Route path={"about"} element={<About />} /> */}
       </Routes>
     </Paper>
   );
-
 }
 
 export default App;

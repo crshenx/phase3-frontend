@@ -8,28 +8,16 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-export default function DressCard({ dress, handleCartRender }) {
+export default function CartCard({ dress, handleCartRender }) {
   const [isFront, setIsFront] = useState(true);
 
   function handleClick() {
     setIsFront(!isFront);
   }
 
-  function handlePostToCart() {
-    fetch("http://localhost:9292/carts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        back_img: dress.back_img,
-        description: dress.description,
-        designer_name: dress.designer_name,
-        front_img: dress.front_img,
-        name: dress.name,
-        price: dress.price,
-        size: 8,
-      }),
+  function handleDeleteFromCart() {
+    fetch(`http://localhost:9292/carts/${dress.id}`, {
+      method: "Delete",
     }).then(handleCartRender);
   }
 
@@ -56,9 +44,9 @@ export default function DressCard({ dress, handleCartRender }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Like ❤️</Button>
-        <Button size="small" onClick={handlePostToCart}>
-          Add to cart 🛒
+        <Button size="small">Like</Button>
+        <Button size="small" onClick={handleDeleteFromCart}>
+          Delete
         </Button>
       </CardActions>
     </Card>
