@@ -15,7 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 // import Catalog from "./Components/Catalog";
 
-const pages = ["Home", "Catalog", "About"];
+const pages = ["Home", "Catalog", "Cart", "About"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const NavBar = () => {
@@ -37,12 +37,6 @@ const NavBar = () => {
     setAnchorElUser(null);
   };
 
-  // function handleNavagation(e) {
-  //   if (e.target.innerText === "CATALOG") {
-  //     <Link to="/Catalog">Catalog</Link>;
-  //   }
-  // }
-
   return (
     <AppBar position="static" style={{ background: "#beabd8" }}>
       <Container maxWidth="xl">
@@ -52,7 +46,7 @@ const NavBar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/Home"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
