@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
 
-function Catalog() {
-  return (
-    <div>I am the Catalog Link!</div>
-  )
+function Catalog({ render }) {
+  // const dresses = render.map((dress) => {
+  //   return <div>{dress}</div>;
+  // });
+  return <div>PLEASE WORK FOR THE LOVE OF GOD</div>;
 }
 
-export default Catalog
+export default Catalog;
