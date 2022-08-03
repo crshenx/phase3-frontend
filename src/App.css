@@ -1,4 +1,4 @@
-.splash {
+/* .splash {
     display: flex;
     height: 100%;
     background-image: url('https://i.imgur.com/ehETORR.png');
@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: center;
     justify-content: center;
-}
+} */
 
 .homeContainer {
     display: flex;

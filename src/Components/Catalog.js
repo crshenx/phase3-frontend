@@ -1,4 +1,3 @@
-
 import React from 'react'
 import DressCard from './DressCard'
 import { Grid } from '@mui/material';
@@ -24,4 +23,4 @@ function Catalog( {render} ) {
   )
 }
 
-export default Catalog
+export default Catalog;
