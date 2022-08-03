@@ -29,3 +29,4 @@ function Cart({ renderCart, handleCartRender }) {
 }
 
 export default Cart;
+

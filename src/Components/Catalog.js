@@ -26,8 +26,8 @@ function Catalog({ render, handleCartRender }) {
           );
         })}
       </Grid>
+
     </Container>
   );
 }
-
 export default Catalog;
