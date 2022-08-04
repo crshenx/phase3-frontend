@@ -7,6 +7,7 @@ import { Container } from "@mui/material";
 function Catalog({ render, handleCartRender }) {
   return (
     <div>
+
       <Container>
         <Grid
           container
@@ -29,6 +30,7 @@ function Catalog({ render, handleCartRender }) {
           })}
         </Grid>
       </Container>
+
     </div>
   );
 }
