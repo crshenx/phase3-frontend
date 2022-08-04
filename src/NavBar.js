@@ -13,13 +13,13 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
+import SearchBar from "./Components/SearchBar";
 // import Catalog from "./Components/Catalog";
-
 
 const pages = ["Home", "Catalog", "Cart", "About"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const NavBar = () => {
+const NavBar = ({ handleSearchChange, render }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -42,7 +42,11 @@ const NavBar = () => {
     <AppBar position="sticky" style={{ background: "#beabd8" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <img src="https://i.imgur.com/QW2bPCK.png" alt="logo" className="logo" />
+          <img
+            src="https://i.imgur.com/QW2bPCK.png"
+            alt="logo"
+            className="logo"
+          />
           <Typography
             variant="h6"
             noWrap
@@ -159,6 +163,7 @@ const NavBar = () => {
               ))}
             </Menu>
           </Box>
+          <SearchBar render={render} handleSearchChange={handleSearchChange} />
         </Toolbar>
       </Container>
     </AppBar>

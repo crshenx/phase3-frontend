@@ -43,16 +43,26 @@ function App() {
     },
   };
 
+  function handleSearchChange(e) {
+    const searchChoice = e.target.innerText.split[0];
+    fetch(`http://localhost:9292/dresses/${searchChoice}`)
+      .then((r) => r.json())
+      .then(setRender);
+  }
+
   return (
     <Paper style={styles.paperContainer}>
-      <NavBar />
-      {/* <Grid container spacing={1}> */}
+      <NavBar handleSearchChange={handleSearchChange} render={render} />
       <Routes>
         <Route path="/Home" element={ <Home /> } />
         <Route
           path="Catalog"
           element={
-            <Catalog render={render} handleCartRender={handleCartRender} />
+            <Catalog
+              render={render}
+              handleCartRender={handleCartRender}
+              handleChange={handleSearchChange}
+            />
           }
         />
         <Route
@@ -63,7 +73,6 @@ function App() {
         />
        <Route path="/About" element={<About />} /> 
       </Routes>
-      {/* </Grid> */}
     </Paper>
   );
 }
