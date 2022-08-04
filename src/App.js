@@ -3,12 +3,15 @@ import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NavBar from "./NavBar.js";
 import Home from "./Home.js";
+import About from "./Components/About.js";
 import "./App.css";
 import Catalog from "./Components/Catalog.js";
 import { Paper } from "@mui/material";
 // import { ShoppingCart } from "@mui/icons-material";
 // import Image from "./img/main.jpg";
 import Cart from "./Components/ShoppingCart";
+
+
 
 function App() {
   const [render, setRender] = useState([]);
@@ -43,8 +46,9 @@ function App() {
   return (
     <Paper style={styles.paperContainer}>
       <NavBar />
+      {/* <Grid container spacing={1}> */}
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/Home" element={ <Home /> } />
         <Route
           path="Catalog"
           element={
@@ -57,8 +61,9 @@ function App() {
             <Cart renderCart={renderCart} handleCartRender={handleCartRender} />
           }
         />
-        {/* <Route path={"about"} element={<About />} /> */}
+       <Route path="/About" element={<About />} /> 
       </Routes>
+      {/* </Grid> */}
     </Paper>
   );
 }
