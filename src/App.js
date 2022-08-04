@@ -11,11 +11,10 @@ import { Paper } from "@mui/material";
 // import Image from "./img/main.jpg";
 import Cart from "./Components/ShoppingCart";
 
-
-
 function App() {
   const [render, setRender] = useState([]);
   const [renderCart, setRenderCart] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:9292/dresses")
@@ -35,7 +34,7 @@ function App() {
       .then(setRenderCart);
   }
 
-  console.log(renderCart);
+  console.log(render);
 
   const styles = {
     paperContainer: {
@@ -47,22 +46,23 @@ function App() {
   };
 
   function handleSearchChange(e) {
-    const searchChoice = e.target.innerText.split[0];
-    fetch(`http://localhost:9292/dresses/${searchChoice}`)
-      .then((r) => r.json())
-      .then(setRender);
+    const searchChoice = e.target.innerText;
+    setSearch(searchChoice);
   }
+
+  const searchDress = render.filter((dress) => dress.designer_name === search);
+  console.log(searchDress);
 
   return (
     <Paper style={styles.paperContainer}>
       <NavBar handleSearchChange={handleSearchChange} render={render} />
       <Routes>
-        <Route path="/Home" element={ <Home /> } />
+        <Route path="/Home" element={<Home />} />
         <Route
           path="Catalog"
           element={
             <Catalog
-              render={render}
+              render={searchDress.length < 1 ? render : searchDress}
               handleCartRender={handleCartRender}
               handleChange={handleSearchChange}
             />
@@ -74,7 +74,7 @@ function App() {
             <Cart renderCart={renderCart} handleCartRender={handleCartRender} />
           }
         />
-       <Route path="/About" element={<About />} /> 
+        <Route path="/About" element={<About />} />
       </Routes>
     </Paper>
   );

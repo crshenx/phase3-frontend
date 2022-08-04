@@ -6,6 +6,11 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const styles = {
+  paperContainer: {
+    backgroundImage: `url("https://i.imgur.com/ehETORR.png")`,
+  },
+};
 root.render(
   <Router>
     <App />

@@ -3,9 +3,9 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 
 export default function SearchBar({ render, handleSearchChange }) {
-  const dressesArray = render;
-  const options = dressesArray.map((option) => {
-    const firstLetter = option.name[0].toUpperCase();
+  const options = render.map((option) => {
+    const firstLetter = option.designer_name[0].toUpperCase();
+    const key = option.id;
     return {
       firstLetter: /[0-9]/.test(firstLetter) ? "0-9" : firstLetter,
       ...option,
@@ -20,7 +20,7 @@ export default function SearchBar({ render, handleSearchChange }) {
         (a, b) => -b.firstLetter.localeCompare(a.firstLetter)
       )}
       groupBy={(option) => option.firstLetter}
-      getOptionLabel={(option) => option.name}
+      getOptionLabel={(option) => option.designer_name}
       sx={{ width: 300 }}
       renderInput={(params) => (
         <TextField {...params} label="With categories" />
