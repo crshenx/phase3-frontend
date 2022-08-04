@@ -8,11 +8,31 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
+
 export default function DressCard({ dress, handleCartRender }) {
   const [isFront, setIsFront] = useState(true);
+  const [likeCount, setLikeCount] = useState(dress.dress_likes ? dress.dress_likes : 0 );
 
   function handleClick() {
     setIsFront(!isFront);
+  }
+
+  function handleAddLike() {
+    // let newCount = likeCount + 1
+    // setLikeCount(newCount)
+    fetch(`http://localhost:9292/dresses/${dress.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        dress_likes: likeCount + 1
+      }),
+    })
+    .then((res) => res.json())
+    .then(dress => {
+      console.log(dress)
+      setLikeCount(dress.dress_likes)})
   }
 
   function handlePostToCart() {
@@ -56,7 +76,7 @@ export default function DressCard({ dress, handleCartRender }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Like ❤️</Button>
+        <Button size="small" onClick={handleAddLike}>❤️ {likeCount}</Button>
         <Button size="small" onClick={handlePostToCart}>
           Add to cart 🛒
         </Button>

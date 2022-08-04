@@ -39,8 +39,11 @@ function App() {
 
   const styles = {
     paperContainer: {
-      backgroundImage: `url("https://i.imgur.com/ehETORR.png")`,
+      backgroundImage: `url("https://i.imgur.com/ehETORR.png")`
+      // background-size: cover;
+      // background-repeat: no-repeat;
     },
+   
   };
 
   function handleSearchChange(e) {

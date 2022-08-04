@@ -22,6 +22,7 @@ export default function CartCard({ dress, handleCartRender }) {
   }
 
   return (
+    <div className="cart">
     <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
         <CardMedia
@@ -50,5 +51,6 @@ export default function CartCard({ dress, handleCartRender }) {
         </Button>
       </CardActions>
     </Card>
+    </div>
   );
 }

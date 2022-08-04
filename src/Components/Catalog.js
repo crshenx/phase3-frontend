@@ -8,7 +8,7 @@ function Catalog({ render, handleCartRender }) {
   return (
     <div>
 
-      <Container>
+      <Container style={{ backgroundImage: "no-repeat" }}>
         <Grid
           container
           direction="row"
@@ -16,6 +16,7 @@ function Catalog({ render, handleCartRender }) {
           alignItems="center"
           rowSpacing={5}
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          // overflow="scroll"
         >
           {render.map((dress) => {
             return (
