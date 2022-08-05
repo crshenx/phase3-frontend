@@ -22,31 +22,32 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const NavBar = ({ handleSearchChange, render }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
-
+  
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
+  
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
+  
   return (
     <AppBar position="sticky" style={{ background: "#beabd8" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img
-            src="https://i.imgur.com/QW2bPCK.png"
-            alt="logo"
-            className="logo"
-          />
+      <img class="mx-auto"
+        src="https://i.imgur.com/QW2bPCK.png"
+        alt="logo"
+        className="logo"
+        position="center"
+      />
           <Typography
             variant="h6"
             noWrap
@@ -118,14 +119,13 @@ const NavBar = ({ handleSearchChange, render }) => {
               textDecoration: "none",
             }}
           >
-            LO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+              key={page}
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block" }}
               >
                 <Link style={{ textDecoration: "none" }} to={`/${page}`}>
                   {page}
@@ -134,7 +134,7 @@ const NavBar = ({ handleSearchChange, render }) => {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -162,7 +162,7 @@ const NavBar = ({ handleSearchChange, render }) => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
           <SearchBar render={render} handleSearchChange={handleSearchChange} />
         </Toolbar>
       </Container>
