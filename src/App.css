@@ -38,7 +38,15 @@
     font-family: Palatino, URW Palladio L, serif;
 }
 
-.about-description {
+.about-description-1 {
+    width: 50%;
+    font-weight: 650;
+    text-align: center;
+    font-family: Palatino, URW Palladio L, serif;
+    padding: 0.4%;
+}
+
+.about-description-2 {
     width: 50%;
     font-weight: 650;
     text-align: center;
@@ -97,3 +105,28 @@
     width: 700px;
     height: auto;
 }
+
+.linkedin-icon {
+    color:#730889;
+    transition: color 0.2s;
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+.linkedin-icon:hover {
+    color:#beabd8;
+}
+
+.github-icon {
+    color:#730889;
+    transition: color 0.2s;
+    font-size: 30px;
+}
+
+.github-icon:hover {
+    color: #beabd8;
+}
+
+.indent-1 {float: left;}
+    .indent-1 section {width: 49.6%; float: left;}
+   
