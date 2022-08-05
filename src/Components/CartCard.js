@@ -23,34 +23,33 @@ export default function CartCard({ dress, handleCartRender }) {
 
   return (
     <div className="cart">
-    <Card sx={{ maxWidth: 300 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="400"
-          onClick={handleClick}
-          image={isFront ? dress.front_img : dress.back_img}
-          alt="pretty dress"
-        />
-      </CardActionArea>
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {dress.name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Designer: {dress.designer_name} <br></br>
-          {dress.description} <br></br>
-          Price: ${dress.price} <br></br>
-          Size: {dress.size}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Like</Button>
-        <Button size="small" onClick={handleDeleteFromCart}>
-          Delete
-        </Button>
-      </CardActions>
-    </Card>
+      <Card sx={{ maxWidth: 300 }}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            height="400"
+            onClick={handleClick}
+            image={isFront ? dress.front_img : dress.back_img}
+            alt="pretty dress"
+          />
+        </CardActionArea>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {dress.name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Designer: {dress.designer_name} <br></br>
+            {dress.description} <br></br>
+            Price: ${dress.price} <br></br>
+            Size: {dress.size}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small" onClick={handleDeleteFromCart}>
+            Delete
+          </Button>
+        </CardActions>
+      </Card>
     </div>
   );
 }
