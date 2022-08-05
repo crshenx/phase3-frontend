@@ -16,11 +16,13 @@ function Cart({ renderCart, handleCartRender }) {
       >
         {renderCart.map((dress) => {
           return (
-            <CartCard
-              dress={dress}
-              key={dress.id}
-              handleCartRender={handleCartRender}
-            />
+            <Grid item m={4}>
+              <CartCard
+                dress={dress}
+                key={dress.id}
+                handleCartRender={handleCartRender}
+              />
+            </Grid>
           );
         })}
       </Grid>
@@ -29,4 +31,3 @@ function Cart({ renderCart, handleCartRender }) {
 }
 
 export default Cart;
-

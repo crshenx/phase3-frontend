@@ -1,3 +1,4 @@
+
 import React from 'react'
 // import { Grid } from "@mui/material";
 
@@ -35,16 +36,10 @@ function About() {
             </section>
            
         </div>
-
-
-
-
-
-
-
     </div>
     // </Grid>
   )
+
 }
 
-export default About
+export default About;

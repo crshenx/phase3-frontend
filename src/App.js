@@ -10,6 +10,7 @@ import { Paper } from "@mui/material";
 // import { ShoppingCart } from "@mui/icons-material";
 // import Image from "./img/main.jpg";
 import Cart from "./Components/ShoppingCart";
+import EmptyCart from "./Components/EmptyCart.js";
 
 function App() {
   const [render, setRender] = useState([]);
@@ -38,11 +39,10 @@ function App() {
 
   const styles = {
     paperContainer: {
-      backgroundImage: `url("https://i.imgur.com/ehETORR.png")`
+      backgroundImage: `url("https://i.imgur.com/ehETORR.png")`,
       // background-size: cover;
       // background-repeat: no-repeat;
     },
-   
   };
 
   function handleSearchChange(e) {
@@ -55,8 +55,10 @@ function App() {
 
   return (
     <Paper style={styles.paperContainer}>
+      {/* <Paper style={styles.paperContainer}> */}
       <NavBar handleSearchChange={handleSearchChange} render={render} />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route
           path="Catalog"
@@ -71,7 +73,14 @@ function App() {
         <Route
           path="Cart"
           element={
-            <Cart renderCart={renderCart} handleCartRender={handleCartRender} />
+            renderCart < 1 ? (
+              <EmptyCart />
+            ) : (
+              <Cart
+                renderCart={renderCart}
+                handleCartRender={handleCartRender}
+              />
+            )
           }
         />
         <Route path="/About" element={<About />} />
